@@ -44,4 +44,4 @@ BLUE "Installing terminator..."
 sudo apt install -y terminator
 
 # Change terminator as default terminal
-sudo update-alternatives --config x-terminal-emulator
+# sudo update-alternatives --config x-terminal-emulator
