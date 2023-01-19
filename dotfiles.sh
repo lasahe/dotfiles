@@ -34,21 +34,6 @@ sudo apt install -y tmux vim
 ## Install tmux config
 wget https://raw.githubusercontent.com/lasahe/dotfiles/main/.tmux.conf -O ~/.tmux.conf
 
-BLUE "Installing Go..."
-sudo apt install -y golang-go
-BLUE "Adding GOPATH and GOBIN to .bashrc, so future installs are easy.."
-grep "export GOPATH" ~/.bashrc
-if [ $? -eq 1 ]
-then
-   echo "export GOPATH=\$HOME/.go/" >> ~/.bashrc
-fi
-grep "export GOBIN" ~/.bashrc
-if [ $? -eq 1 ]
-then
-   echo "export GOBIN=\$HOME/.go/bin" >> ~/.bashrc
-   echo "export PATH=\$PATH:\$GOBIN" >> ~/.bashrc
-fi
-
 BLUE "Setting Keyboard to FI..."
 setxkbmap -layout fi 
 
